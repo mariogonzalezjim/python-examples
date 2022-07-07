@@ -69,7 +69,12 @@ GET /products/types
 
     curl -i -H 'Accept: application/json' http://localhost:6000/api/v1/product/types
 
-Returns a list of the product types.
+Returns a list of the product types. Example:
+
+```json
+[{"id": 1, "type": "Snacks"}, {"id": 2, "type": "Fresh"}]
+```
+
 ###
 
 <h4 align="left">Get products</h4>
@@ -86,7 +91,11 @@ POST /products
 
     curl -X POST http://localhost:6000/api/v1/products -H 'Accept: application/json' -H "Content-Type: application/json" -d '{ "brand":"nestle","type": "2","kcal": 28.5,"fat": 10,"sugar": 20}'
 
-Returns the product created.
+Returns the product created. Example:
+
+```json
+{"id": 1, "brand": "nestle", "product_type_id": 2, "kcal": 28.5, "fat": 10.0, "sugar": 20.0}
+```
 
 ###
 
