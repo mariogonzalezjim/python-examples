@@ -50,7 +50,7 @@ def add_product():
         return api_response(400, db_response)
     else: 
         query = f'SELECT * FROM products WHERE rowid={db_response}'
-        return api_response(200, db.query(DB_CONN, query))
+        return api_response(200, db.querySingle(DB_CONN, query))
     
 ### GET
 @urls_blueprint.route(f'{config.API_PATH}/products', methods=['GET'])
@@ -77,7 +77,7 @@ def update_product(id):
     db_response = db.update(DB_CONN, query)
     if db_response == True :
         query = f'SELECT * FROM products WHERE rowid={id}'
-        return api_response(200, db.query(DB_CONN, query))
+        return api_response(200, db.querySingle(DB_CONN, query))
     else: 
         return api_response(400, db_response)
 
@@ -115,7 +115,7 @@ def add_supermarkets():
         return api_response(400, db_response)
     else: 
         query = f'SELECT * FROM supermarkets WHERE rowid={db_response}'
-        return api_response(200, db.query(DB_CONN, query))
+        return api_response(200, db.querySingle(DB_CONN, query))
 
 #####################################
 ######       PRICES             #####

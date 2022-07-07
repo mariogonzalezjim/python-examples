@@ -25,6 +25,11 @@ def query(conn, query):
     cur.execute(query)
     return cur.fetchall()
 
+def querySingle(conn, query):
+    cur = conn.cursor()
+    cur.execute(query)
+    return cur.fetchone()
+
 def insert(conn, query):
     try:
         cur = conn.cursor()
