@@ -41,7 +41,24 @@ python3 ./such_wow.py 1 10
 ###
 
 <div align="center">
-  <img height="200" src="./exercise_2/db/schema.png"  />
+  <img height="250" src="./exercise_2/db/schema.png"  />
 </div>
+
+###
+
+<p align="left">Config.py has some configurable parameters like port or database name. To start the API:<p>
+
+```python
+python3 ./main.py
+```
+<p align="left"> If you want to clean and reset the database, execute:</p>
+
+```python
+python3 ./main.py reset
+```
+
+###
+
+<h2 align="left">API methods</h2>
 
 ###
