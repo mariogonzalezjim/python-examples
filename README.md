@@ -91,7 +91,7 @@ Returns the product created.
 ###
 
 <h4 align="left">Update a product</h4>
-PUT /products/* *product_id* *
+PUT /products/<i>product_id</i>
 
     curl -X PUT http://localhost:6000/api/v1/products/1 -H 'Accept: application/json' -H "Content-Type: application/json" -d '{ "brand":"hacendado","type": "2","kcal": 28.5,"fat": 10,"sugar": 20}'
 
@@ -127,7 +127,7 @@ Returns the object created.
 ###
 
 <h4 align="left">Get all products from a supermarket</h4>
-GET /supermarkets/* *supermarket_id* */products
+GET /supermarkets/<i>supermarket_id</i>/products
 
     curl -i -H 'Accept: application/json' http://localhost:6000/api/v1/supermarkets/1/products
 
