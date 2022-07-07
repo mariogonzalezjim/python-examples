@@ -61,6 +61,7 @@ python3 ./main.py reset
 
 <h3 align="left">API methods</h3>
 All API methods return status code 200 for successful operations and 400 code and an error message for failed operations.
+
 ###
 
 <h4 align="left">Get product types</h4>
@@ -90,7 +91,7 @@ Returns the product created.
 ###
 
 <h4 align="left">Update a product</h4>
-PUT /products/<product_id>
+PUT /products/\<product_id\>
 
     curl -X PUT http://localhost:6000/api/v1/products/1 -H 'Accept: application/json' -H "Content-Type: application/json" -d '{ "brand":"hacendado","type": "2","kcal": 28.5,"fat": 10,"sugar": 20}'
 
