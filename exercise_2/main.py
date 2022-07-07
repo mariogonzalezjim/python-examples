@@ -1,6 +1,4 @@
-from flask import Flask, jsonify
-import sqlite3
-import os
+from flask import Flask
 import config
 import db
 import sys

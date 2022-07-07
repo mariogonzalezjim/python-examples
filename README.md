@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">This repository contains several Python simple exercises that can be useful for begginers or a quick starting point of your project. Each folder is a different Python project itself.</p>
+<p align="left">This repository contains several Python simple exercises that can be useful for beginners or a quick starting point of your project. Each folder is a different Python project itself.</p>
 
 ###
 
@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">You need Python3.X and pip installed. First time you run a project, execute:<br><br>
+<p align="left">You need Python3.X and pip installed. The first time you run a project execute:<br><br>
 </p>
 
 <code>
@@ -23,11 +23,16 @@ pip install -r requirements.txt
 
 ###
 
-<p align="left">This project is a very simple script that iterate from n to r number and print a list as an ouput. If the number is multiple of 3, it is printed 'Such'. If it is multiple of 5, it is printed 'Wow'. if it is multiple of both, it is printed 'SuchWow'. Otherwise, it is printed the original number. To execute:<br><br>
+<p align="left">This project is a simple script that iterate from n to r number and print a list as an ouput. If the number is multiple of 3, it is printed 'Such'. If it is multiple of 5, it is printed 'Wow'. if it is multiple of both, it is printed 'SuchWow'. Otherwise, it is printed the original number. To execute:<br><br>
 </p>
 
 ```python
 python3 ./such_wow.py 1 10
+```
+Returns
+
+```json
+[1, 2, 'Such', 4, 'Wow', 'Such', 7, 8, 'Such', 'Wow']
 ```
 
 ###
@@ -126,7 +131,7 @@ Returns the supermarket created.
 
 ###
 
-<h4 align="left">Asign product price to specific supermarket</h4>
+<h4 align="left">Assign product price to specific supermarket</h4>
 POST /product_prices
 
     curl -X POST http://localhost:6000/api/v1/product_prices -H 'Accept: application/json' -H "Content-Type: application/json" -d '{ "product_id": 1, "supermarket_id": 1, "price": 30.0}'

@@ -1,6 +1,5 @@
 import sqlite3
 import os
-import json
 
 def row_to_dict(cursor: sqlite3.Cursor, row: sqlite3.Row) -> dict:
     data = {}
