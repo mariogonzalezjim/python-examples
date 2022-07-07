@@ -59,6 +59,33 @@ python3 ./main.py reset
 
 ###
 
-<h2 align="left">API methods</h2>
+<h3 align="left">API methods</h3>
 
 ###
+
+<h4 align="left">Get product types</h4>
+`GET /products/types`
+
+    curl -i -H 'Accept: application/json' http://localhost:6000/api/v1/product/types
+
+Returns a list of the product types.
+###
+
+<h4 align="left">Get products</h4>
+`GET /products`
+
+    curl -i -H 'Accept: application/json' http://localhost:6000/api/v1/products
+
+Returns a list of the products.
+
+###
+
+<h4 align="left">Add a new product</h4>
+`POST /products`
+
+    curl -X POST http://localhost:6000/api/v1/products -H 'Accept: application/json' -H "Content-Type: application/json" -d '{ "brand":"nestle","type": "2","kcal": 28.5,"fat": 10,"sugar": 20}'
+
+Returns the product created.
+
+
+
