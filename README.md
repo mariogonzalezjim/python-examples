@@ -60,11 +60,11 @@ python3 ./main.py reset
 ###
 
 <h3 align="left">API methods</h3>
-
+All API methods return status code 200 for successful operations and 400 code and an error message for failed operations.
 ###
 
 <h4 align="left">Get product types</h4>
-`GET /products/types`
+GET /products/types
 
     curl -i -H 'Accept: application/json' http://localhost:6000/api/v1/product/types
 
@@ -72,7 +72,7 @@ Returns a list of the product types.
 ###
 
 <h4 align="left">Get products</h4>
-`GET /products`
+GET /products
 
     curl -i -H 'Accept: application/json' http://localhost:6000/api/v1/products
 
@@ -81,11 +81,55 @@ Returns a list of the products.
 ###
 
 <h4 align="left">Add a new product</h4>
-`POST /products`
+POST /products
 
     curl -X POST http://localhost:6000/api/v1/products -H 'Accept: application/json' -H "Content-Type: application/json" -d '{ "brand":"nestle","type": "2","kcal": 28.5,"fat": 10,"sugar": 20}'
 
 Returns the product created.
 
+###
 
+<h4 align="left">Update a product</h4>
+PUT /products/<product_id>
 
+    curl -X PUT http://localhost:6000/api/v1/products/1 -H 'Accept: application/json' -H "Content-Type: application/json" -d '{ "brand":"hacendado","type": "2","kcal": 28.5,"fat": 10,"sugar": 20}'
+
+Returns the product created.
+
+###
+
+<h4 align="left">Get supermarkets</h4>
+GET /supermarkets
+
+    curl -i -H 'Accept: application/json' http://localhost:6000/api/v1/supermarkets
+
+Returns a list of the supermarkets.
+
+###
+
+<h4 align="left">Add a new supermarket</h4>
+POST /supermarkets
+
+    curl -X POST http://localhost:6000/api/v1/supermarkets -H 'Accept: application/json' -H "Content-Type: application/json" -d '{ "name": "Mercadona3", "direction": "Madrid" ,"opening_hours": "09:00-21:00"}'
+
+Returns the supermarket created.
+
+###
+
+<h4 align="left">Asign product price to specific supermarket</h4>
+POST /product_prices
+
+    curl -X POST http://localhost:6000/api/v1/product_prices -H 'Accept: application/json' -H "Content-Type: application/json" -d '{ "product_id": 1, "supermarket_id": 1, "price": 30.0}'
+
+Returns the object created.
+
+###
+
+<h4 align="left">Get all products from a supermarket</h4>
+GET /supermarkets/<supermarket_id>/products
+
+    curl -i -H 'Accept: application/json' http://localhost:6000/api/v1/supermarkets/1/products
+
+Returns a list of the products including their prices.
+
+###
