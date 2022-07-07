@@ -31,3 +31,17 @@ python3 ./such_wow.py 1 10
 ```
 
 ###
+
+<h2 align="left">Exercise_2</h2>
+
+###
+
+<p align="left">This project is a json API REST server using Flask and SQLite. The database schema constains food products, food product types, supermarkets and the price a product has in each supermarket. Full schema is:</p>
+
+###
+
+<div align="center">
+  <img height="200" src="./exercise_2/db/schema.png"  />
+</div>
+
+###
